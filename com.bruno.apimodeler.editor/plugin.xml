@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated apimodeler -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="apimodeler.presentation.ApimodelerModelWizardID"
+            name="%_UI_ApimodelerModelWizard_label"
+            class="apimodeler.presentation.ApimodelerModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ApimodelerModelFile.gif">
+         <description>%_UI_ApimodelerModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated apimodeler -->
+      <editor
+            id="apimodeler.presentation.ApimodelerEditorID"
+            name="%_UI_ApimodelerEditor_label"
+            icon="icons/full/obj16/ApimodelerModelFile.gif"
+            extensions="apimodeler"
+            class="apimodeler.presentation.ApimodelerEditor"
+            contributorClass="apimodeler.presentation.ApimodelerActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

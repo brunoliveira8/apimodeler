@@ -1,0 +1,46 @@
+swagger: '2.0'
+info:
+  version: 'v1'
+  title: 'Contacts Sample API'
+  description: 'This is just a Contact Sample API.'
+
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /brunoliveira8/contacts/v1
+schemes:
+ - https
+
+paths:
+  /contacts/{contactId}:
+    get:
+      description: Returns a contact by ID
+      parameters:
+        - name: contactId
+          type: integer
+          in: path
+          required: true
+          description: The ID of the contact to return
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Contact'
+        400:
+          description: The specified contact ID is invalid (e.g. not a number)
+        404:
+          description: A contact with the specified ID was not found
+
+definitions:
+  Contact:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      email:
+        type: string
+      phone:
+        type: string

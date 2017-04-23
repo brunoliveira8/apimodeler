@@ -1,0 +1,70 @@
+{
+  "swagger": "2.0",
+  "host": "virtserver.swaggerhub.com",
+  "basePath": "/brunoliveira8/contacts/v1",
+  "schemes": [
+    "https"
+  ],
+  "info": {
+    "version": "v1",
+    "title": "Contacts Sample API",
+    "description": "This is just a Contact Sample API."
+  },
+  "paths": {
+    "/contacts/{contactId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "contactId",
+            "in": "path",
+            "type": "integer",
+            "description": "The ID of the contact to return",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/responses/400Error"
+          },
+          "404": {
+            "$ref": "#/responses/404Error"
+          },
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "400Error": {
+      "description": "The specified contact ID is invalid (e.g. not a number)"
+    },
+    "404Error": {
+      "description": "A contact with the specified ID was not found"
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
