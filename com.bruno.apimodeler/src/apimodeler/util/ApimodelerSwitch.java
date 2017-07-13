@@ -114,6 +114,41 @@ public class ApimodelerSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ApimodelerPackage.GET: {
+				Get get = (Get)theEObject;
+				T result = caseGet(get);
+				if (result == null) result = caseAction(get);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApimodelerPackage.POST: {
+				Post post = (Post)theEObject;
+				T result = casePost(post);
+				if (result == null) result = caseAction(post);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApimodelerPackage.PUT: {
+				Put put = (Put)theEObject;
+				T result = casePut(put);
+				if (result == null) result = caseAction(put);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApimodelerPackage.DELETE: {
+				Delete delete = (Delete)theEObject;
+				T result = caseDelete(delete);
+				if (result == null) result = caseAction(delete);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ApimodelerPackage.PATCH: {
+				Patch patch = (Patch)theEObject;
+				T result = casePatch(patch);
+				if (result == null) result = caseAction(patch);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -235,6 +270,81 @@ public class ApimodelerSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseField(Field object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Get</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Get</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGet(Get object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Post</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Post</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePost(Post object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Put</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Put</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePut(Put object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDelete(Delete object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Patch</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Patch</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePatch(Patch object) {
 		return null;
 	}
 

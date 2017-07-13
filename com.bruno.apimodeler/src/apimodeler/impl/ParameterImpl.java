@@ -3,6 +3,8 @@
 package apimodeler.impl;
 
 import apimodeler.ApimodelerPackage;
+import apimodeler.DataType;
+import apimodeler.In;
 import apimodeler.Parameter;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,7 +60,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IN_EDEFAULT = null;
+	protected static final In IN_EDEFAULT = In.QUERY;
 
 	/**
 	 * The cached value of the '{@link #getIn() <em>In</em>}' attribute.
@@ -68,7 +70,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected String in = IN_EDEFAULT;
+	protected In in = IN_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -78,7 +80,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
+	protected static final DataType TYPE_EDEFAULT = DataType.INTEGER;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -88,7 +90,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * @generated
 	 * @ordered
 	 */
-	protected String type = TYPE_EDEFAULT;
+	protected DataType type = TYPE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -175,7 +177,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIn() {
+	public In getIn() {
 		return in;
 	}
 
@@ -184,9 +186,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIn(String newIn) {
-		String oldIn = in;
-		in = newIn;
+	public void setIn(In newIn) {
+		In oldIn = in;
+		in = newIn == null ? IN_EDEFAULT : newIn;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.PARAMETER__IN, oldIn, in));
 	}
@@ -196,7 +198,7 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
+	public DataType getType() {
 		return type;
 	}
 
@@ -205,9 +207,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
+	public void setType(DataType newType) {
+		DataType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.PARAMETER__TYPE, oldType, type));
 	}
@@ -288,10 +290,10 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 				setName((String)newValue);
 				return;
 			case ApimodelerPackage.PARAMETER__IN:
-				setIn((String)newValue);
+				setIn((In)newValue);
 				return;
 			case ApimodelerPackage.PARAMETER__TYPE:
-				setType((String)newValue);
+				setType((DataType)newValue);
 				return;
 			case ApimodelerPackage.PARAMETER__DESCRIPTION:
 				setDescription((String)newValue);
@@ -341,9 +343,9 @@ public class ParameterImpl extends MinimalEObjectImpl.Container implements Param
 			case ApimodelerPackage.PARAMETER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApimodelerPackage.PARAMETER__IN:
-				return IN_EDEFAULT == null ? in != null : !IN_EDEFAULT.equals(in);
+				return in != IN_EDEFAULT;
 			case ApimodelerPackage.PARAMETER__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+				return type != TYPE_EDEFAULT;
 			case ApimodelerPackage.PARAMETER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApimodelerPackage.PARAMETER__REQUIRED:

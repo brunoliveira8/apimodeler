@@ -6,18 +6,16 @@ import apimodeler.ApimodelerPackage;
 import apimodeler.Document;
 import apimodeler.Response;
 
-import java.util.Collection;
+import apimodeler.SchemaType;
+import apimodeler.StatusCode;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +44,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_EDEFAULT = "";
+	protected static final StatusCode CODE_EDEFAULT = StatusCode.C200;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -56,7 +54,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * @generated
 	 * @ordered
 	 */
-	protected String code = CODE_EDEFAULT;
+	protected StatusCode code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -86,7 +84,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
+	protected static final SchemaType TYPE_EDEFAULT = SchemaType.OBJECT;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -96,7 +94,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * @generated
 	 * @ordered
 	 */
-	protected String type = TYPE_EDEFAULT;
+	protected SchemaType type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDocuments() <em>Documents</em>}' reference.
@@ -109,14 +107,14 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	protected Document documents;
 
 	/**
-	 * The cached value of the '{@link #getDocument() <em>Document</em>}' containment reference list.
+	 * The cached value of the '{@link #getDocument() <em>Document</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDocument()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Document> document;
+	protected Document document;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -162,7 +160,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
+	public StatusCode getCode() {
 		return code;
 	}
 
@@ -171,9 +169,9 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
+	public void setCode(StatusCode newCode) {
+		StatusCode oldCode = code;
+		code = newCode == null ? CODE_EDEFAULT : newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.RESPONSE__CODE, oldCode, code));
 	}
@@ -204,7 +202,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
+	public SchemaType getType() {
 		return type;
 	}
 
@@ -213,9 +211,9 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
+	public void setType(SchemaType newType) {
+		SchemaType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.RESPONSE__TYPE, oldType, type));
 	}
@@ -263,11 +261,42 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Document> getDocument() {
-		if (document == null) {
-			document = new EObjectContainmentEList<Document>(Document.class, this, ApimodelerPackage.RESPONSE__DOCUMENT);
-		}
+	public Document getDocument() {
 		return document;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDocument(Document newDocument, NotificationChain msgs) {
+		Document oldDocument = document;
+		document = newDocument;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ApimodelerPackage.RESPONSE__DOCUMENT, oldDocument, newDocument);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDocument(Document newDocument) {
+		if (newDocument != document) {
+			NotificationChain msgs = null;
+			if (document != null)
+				msgs = ((InternalEObject)document).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ApimodelerPackage.RESPONSE__DOCUMENT, null, msgs);
+			if (newDocument != null)
+				msgs = ((InternalEObject)newDocument).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ApimodelerPackage.RESPONSE__DOCUMENT, null, msgs);
+			msgs = basicSetDocument(newDocument, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.RESPONSE__DOCUMENT, newDocument, newDocument));
 	}
 
 	/**
@@ -300,7 +329,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ApimodelerPackage.RESPONSE__DOCUMENT:
-				return ((InternalEList<?>)getDocument()).basicRemove(otherEnd, msgs);
+				return basicSetDocument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -340,20 +369,19 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ApimodelerPackage.RESPONSE__CODE:
-				setCode((String)newValue);
+				setCode((StatusCode)newValue);
 				return;
 			case ApimodelerPackage.RESPONSE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 			case ApimodelerPackage.RESPONSE__TYPE:
-				setType((String)newValue);
+				setType((SchemaType)newValue);
 				return;
 			case ApimodelerPackage.RESPONSE__DOCUMENTS:
 				setDocuments((Document)newValue);
 				return;
 			case ApimodelerPackage.RESPONSE__DOCUMENT:
-				getDocument().clear();
-				getDocument().addAll((Collection<? extends Document>)newValue);
+				setDocument((Document)newValue);
 				return;
 			case ApimodelerPackage.RESPONSE__NAME:
 				setName((String)newValue);
@@ -383,7 +411,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 				setDocuments((Document)null);
 				return;
 			case ApimodelerPackage.RESPONSE__DOCUMENT:
-				getDocument().clear();
+				setDocument((Document)null);
 				return;
 			case ApimodelerPackage.RESPONSE__NAME:
 				setName(NAME_EDEFAULT);
@@ -401,15 +429,15 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ApimodelerPackage.RESPONSE__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+				return code != CODE_EDEFAULT;
 			case ApimodelerPackage.RESPONSE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ApimodelerPackage.RESPONSE__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+				return type != TYPE_EDEFAULT;
 			case ApimodelerPackage.RESPONSE__DOCUMENTS:
 				return documents != null;
 			case ApimodelerPackage.RESPONSE__DOCUMENT:
-				return document != null && !document.isEmpty();
+				return document != null;
 			case ApimodelerPackage.RESPONSE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

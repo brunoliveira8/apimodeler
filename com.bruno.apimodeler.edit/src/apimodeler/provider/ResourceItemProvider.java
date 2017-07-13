@@ -125,7 +125,11 @@ public class ResourceItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__ACTION);
+			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__GET);
+			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__POST);
+			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__PUT);
+			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__DELETE);
+			childrenFeatures.add(ApimodelerPackage.Literals.RESOURCE__PATCH);
 		}
 		return childrenFeatures;
 	}
@@ -184,7 +188,11 @@ public class ResourceItemProvider
 			case ApimodelerPackage.RESOURCE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ApimodelerPackage.RESOURCE__ACTION:
+			case ApimodelerPackage.RESOURCE__GET:
+			case ApimodelerPackage.RESOURCE__POST:
+			case ApimodelerPackage.RESOURCE__PUT:
+			case ApimodelerPackage.RESOURCE__DELETE:
+			case ApimodelerPackage.RESOURCE__PATCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,8 +212,28 @@ public class ResourceItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ApimodelerPackage.Literals.RESOURCE__ACTION,
-				 ApimodelerFactory.eINSTANCE.createAction()));
+				(ApimodelerPackage.Literals.RESOURCE__GET,
+				 ApimodelerFactory.eINSTANCE.createGet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApimodelerPackage.Literals.RESOURCE__POST,
+				 ApimodelerFactory.eINSTANCE.createPost()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApimodelerPackage.Literals.RESOURCE__PUT,
+				 ApimodelerFactory.eINSTANCE.createPut()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApimodelerPackage.Literals.RESOURCE__DELETE,
+				 ApimodelerFactory.eINSTANCE.createDelete()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ApimodelerPackage.Literals.RESOURCE__PATCH,
+				 ApimodelerFactory.eINSTANCE.createPatch()));
 	}
 
 	/**

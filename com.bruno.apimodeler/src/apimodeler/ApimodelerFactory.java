@@ -49,15 +49,6 @@ public interface ApimodelerFactory extends EFactory {
 	Resource createResource();
 
 	/**
-	 * Returns a new object of class '<em>Action</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Action</em>'.
-	 * @generated
-	 */
-	Action createAction();
-
-	/**
 	 * Returns a new object of class '<em>Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +83,51 @@ public interface ApimodelerFactory extends EFactory {
 	 * @generated
 	 */
 	Field createField();
+
+	/**
+	 * Returns a new object of class '<em>Get</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get</em>'.
+	 * @generated
+	 */
+	Get createGet();
+
+	/**
+	 * Returns a new object of class '<em>Post</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Post</em>'.
+	 * @generated
+	 */
+	Post createPost();
+
+	/**
+	 * Returns a new object of class '<em>Put</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Put</em>'.
+	 * @generated
+	 */
+	Put createPut();
+
+	/**
+	 * Returns a new object of class '<em>Delete</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete</em>'.
+	 * @generated
+	 */
+	Delete createDelete();
+
+	/**
+	 * Returns a new object of class '<em>Patch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Patch</em>'.
+	 * @generated
+	 */
+	Patch createPatch();
 
 	/**
 	 * Returns the package supported by this factory.

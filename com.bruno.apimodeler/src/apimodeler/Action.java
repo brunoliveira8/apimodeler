@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see apimodeler.ApimodelerPackage#getAction()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Action extends EObject {

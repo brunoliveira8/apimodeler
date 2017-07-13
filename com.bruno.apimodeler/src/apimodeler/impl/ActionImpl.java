@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
+public abstract class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -53,6 +53,7 @@ public interface Parameter extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>In</b></em>' attribute.
+	 * The literals are from the enumeration {@link apimodeler.In}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>In</em>' attribute isn't clear,
@@ -60,25 +61,28 @@ public interface Parameter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>In</em>' attribute.
-	 * @see #setIn(String)
+	 * @see apimodeler.In
+	 * @see #setIn(In)
 	 * @see apimodeler.ApimodelerPackage#getParameter_In()
 	 * @model
 	 * @generated
 	 */
-	String getIn();
+	In getIn();
 
 	/**
 	 * Sets the value of the '{@link apimodeler.Parameter#getIn <em>In</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>In</em>' attribute.
+	 * @see apimodeler.In
 	 * @see #getIn()
 	 * @generated
 	 */
-	void setIn(String value);
+	void setIn(In value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link apimodeler.DataType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -86,22 +90,24 @@ public interface Parameter extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
+	 * @see apimodeler.DataType
+	 * @see #setType(DataType)
 	 * @see apimodeler.ApimodelerPackage#getParameter_Type()
 	 * @model
 	 * @generated
 	 */
-	String getType();
+	DataType getType();
 
 	/**
 	 * Sets the value of the '{@link apimodeler.Parameter#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see apimodeler.DataType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(String value);
+	void setType(DataType value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

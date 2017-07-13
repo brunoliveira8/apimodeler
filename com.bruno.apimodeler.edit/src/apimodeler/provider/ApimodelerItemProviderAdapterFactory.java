@@ -141,29 +141,6 @@ public class ApimodelerItemProviderAdapterFactory extends ApimodelerAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link apimodeler.Action} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ActionItemProvider actionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link apimodeler.Action}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createActionAdapter() {
-		if (actionItemProvider == null) {
-			actionItemProvider = new ActionItemProvider(this);
-		}
-
-		return actionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link apimodeler.Parameter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,6 +230,121 @@ public class ApimodelerItemProviderAdapterFactory extends ApimodelerAdapterFacto
 		}
 
 		return fieldItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link apimodeler.Get} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GetItemProvider getItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link apimodeler.Get}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGetAdapter() {
+		if (getItemProvider == null) {
+			getItemProvider = new GetItemProvider(this);
+		}
+
+		return getItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link apimodeler.Post} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PostItemProvider postItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link apimodeler.Post}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPostAdapter() {
+		if (postItemProvider == null) {
+			postItemProvider = new PostItemProvider(this);
+		}
+
+		return postItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link apimodeler.Put} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PutItemProvider putItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link apimodeler.Put}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPutAdapter() {
+		if (putItemProvider == null) {
+			putItemProvider = new PutItemProvider(this);
+		}
+
+		return putItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link apimodeler.Delete} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeleteItemProvider deleteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link apimodeler.Delete}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeleteAdapter() {
+		if (deleteItemProvider == null) {
+			deleteItemProvider = new DeleteItemProvider(this);
+		}
+
+		return deleteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link apimodeler.Patch} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PatchItemProvider patchItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link apimodeler.Patch}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPatchAdapter() {
+		if (patchItemProvider == null) {
+			patchItemProvider = new PatchItemProvider(this);
+		}
+
+		return patchItemProvider;
 	}
 
 	/**
@@ -357,11 +449,15 @@ public class ApimodelerItemProviderAdapterFactory extends ApimodelerAdapterFacto
 		if (apiItemProvider != null) apiItemProvider.dispose();
 		if (informationItemProvider != null) informationItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();
-		if (actionItemProvider != null) actionItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();
 		if (responseItemProvider != null) responseItemProvider.dispose();
 		if (documentItemProvider != null) documentItemProvider.dispose();
 		if (fieldItemProvider != null) fieldItemProvider.dispose();
+		if (getItemProvider != null) getItemProvider.dispose();
+		if (postItemProvider != null) postItemProvider.dispose();
+		if (putItemProvider != null) putItemProvider.dispose();
+		if (deleteItemProvider != null) deleteItemProvider.dispose();
+		if (patchItemProvider != null) patchItemProvider.dispose();
 	}
 
 }

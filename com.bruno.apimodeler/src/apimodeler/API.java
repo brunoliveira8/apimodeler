@@ -84,7 +84,8 @@ public interface API extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Schemes</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link apimodeler.Schemes}.
+	 * The literals are from the enumeration {@link apimodeler.Schemes}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Schemes</em>' attribute list isn't clear,
@@ -92,11 +93,12 @@ public interface API extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Schemes</em>' attribute list.
+	 * @see apimodeler.Schemes
 	 * @see apimodeler.ApimodelerPackage#getAPI_Schemes()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getSchemes();
+	EList<Schemes> getSchemes();
 
 	/**
 	 * Returns the value of the '<em><b>Info</b></em>' containment reference.

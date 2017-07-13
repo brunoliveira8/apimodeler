@@ -6,6 +6,40 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>apimodeler.ecore</foreignModel>
   <genPackages prefix="Apimodeler" disposableProviderFactory="true" ecorePackage="apimodeler.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="apimodeler.ecore#//Schemes">
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//Schemes/HTTP"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//Schemes/HTTPS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="apimodeler.ecore#//DataType">
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/long"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/byte"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/binary"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/date"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/dateTime"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//DataType/password"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="apimodeler.ecore#//StatusCode">
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//StatusCode/C200"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//StatusCode/C404"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//StatusCode/C400"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//StatusCode/C500"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="apimodeler.ecore#//SchemaType">
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//SchemaType/array"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//SchemaType/object"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="apimodeler.ecore#//In">
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//In/query"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//In/header"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//In/path"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//In/formData"/>
+      <genEnumLiterals ecoreEnumLiteral="apimodeler.ecore#//In/body"/>
+    </genEnums>
     <genClasses ecoreClass="apimodeler.ecore#//API">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//API/host"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//API/basePath"/>
@@ -22,9 +56,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//Information/description"/>
     </genClasses>
     <genClasses ecoreClass="apimodeler.ecore#//Resource">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/action"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//Resource/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/pathParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/get"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/post"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/put"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/delete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference apimodeler.ecore#//Resource/patch"/>
     </genClasses>
     <genClasses ecoreClass="apimodeler.ecore#//Action">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//Action/type"/>
@@ -57,6 +95,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//Field/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute apimodeler.ecore#//Field/type"/>
     </genClasses>
-    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="apimodeler.ecore#//newPackage1"/>
+    <genClasses ecoreClass="apimodeler.ecore#//Get"/>
+    <genClasses ecoreClass="apimodeler.ecore#//Post"/>
+    <genClasses ecoreClass="apimodeler.ecore#//Put"/>
+    <genClasses ecoreClass="apimodeler.ecore#//Delete"/>
+    <genClasses ecoreClass="apimodeler.ecore#//Patch"/>
   </genPackages>
 </genmodel:GenModel>

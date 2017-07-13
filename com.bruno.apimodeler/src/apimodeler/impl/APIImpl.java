@@ -10,6 +10,7 @@ import apimodeler.Parameter;
 import apimodeler.Resource;
 
 import apimodeler.Response;
+import apimodeler.Schemes;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -96,7 +97,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> schemes;
+	protected EList<Schemes> schemes;
 
 	/**
 	 * The cached value of the '{@link #getInfo() <em>Info</em>}' containment reference.
@@ -214,9 +215,9 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getSchemes() {
+	public EList<Schemes> getSchemes() {
 		if (schemes == null) {
-			schemes = new EDataTypeUniqueEList<String>(String.class, this, ApimodelerPackage.API__SCHEMES);
+			schemes = new EDataTypeUniqueEList<Schemes>(Schemes.class, this, ApimodelerPackage.API__SCHEMES);
 		}
 		return schemes;
 	}
@@ -379,7 +380,7 @@ public class APIImpl extends MinimalEObjectImpl.Container implements API {
 				return;
 			case ApimodelerPackage.API__SCHEMES:
 				getSchemes().clear();
-				getSchemes().addAll((Collection<? extends String>)newValue);
+				getSchemes().addAll((Collection<? extends Schemes>)newValue);
 				return;
 			case ApimodelerPackage.API__INFO:
 				setInfo((Information)newValue);

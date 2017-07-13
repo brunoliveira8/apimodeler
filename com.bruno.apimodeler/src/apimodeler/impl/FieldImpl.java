@@ -3,6 +3,7 @@
 package apimodeler.impl;
 
 import apimodeler.ApimodelerPackage;
+import apimodeler.DataType;
 import apimodeler.Field;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -55,7 +56,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
+	protected static final DataType TYPE_EDEFAULT = DataType.INTEGER;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -65,7 +66,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	 * @generated
 	 * @ordered
 	 */
-	protected String type = TYPE_EDEFAULT;
+	protected DataType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +113,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
+	public DataType getType() {
 		return type;
 	}
 
@@ -121,9 +122,9 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
+	public void setType(DataType newType) {
+		DataType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ApimodelerPackage.FIELD__TYPE, oldType, type));
 	}
@@ -156,7 +157,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 				setName((String)newValue);
 				return;
 			case ApimodelerPackage.FIELD__TYPE:
-				setType((String)newValue);
+				setType((DataType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,7 +192,7 @@ public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 			case ApimodelerPackage.FIELD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ApimodelerPackage.FIELD__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

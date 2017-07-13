@@ -100,6 +100,26 @@ public class ApimodelerAdapterFactory extends AdapterFactoryImpl {
 				return createFieldAdapter();
 			}
 			@Override
+			public Adapter caseGet(Get object) {
+				return createGetAdapter();
+			}
+			@Override
+			public Adapter casePost(Post object) {
+				return createPostAdapter();
+			}
+			@Override
+			public Adapter casePut(Put object) {
+				return createPutAdapter();
+			}
+			@Override
+			public Adapter caseDelete(Delete object) {
+				return createDeleteAdapter();
+			}
+			@Override
+			public Adapter casePatch(Patch object) {
+				return createPatchAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -228,6 +248,76 @@ public class ApimodelerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link apimodeler.Get <em>Get</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see apimodeler.Get
+	 * @generated
+	 */
+	public Adapter createGetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link apimodeler.Post <em>Post</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see apimodeler.Post
+	 * @generated
+	 */
+	public Adapter createPostAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link apimodeler.Put <em>Put</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see apimodeler.Put
+	 * @generated
+	 */
+	public Adapter createPutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link apimodeler.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see apimodeler.Delete
+	 * @generated
+	 */
+	public Adapter createDeleteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link apimodeler.Patch <em>Patch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see apimodeler.Patch
+	 * @generated
+	 */
+	public Adapter createPatchAdapter() {
 		return null;
 	}
 

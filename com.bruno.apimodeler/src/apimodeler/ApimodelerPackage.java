@@ -4,6 +4,7 @@ package apimodeler;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -222,22 +223,13 @@ public interface ApimodelerPackage extends EPackage {
 	int RESOURCE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE__ACTION = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__NAME = 1;
+	int RESOURCE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Path Parameter</b></em>' reference list.
@@ -246,7 +238,52 @@ public interface ApimodelerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__PATH_PARAMETER = 2;
+	int RESOURCE__PATH_PARAMETER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Get</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__GET = 2;
+
+	/**
+	 * The feature id for the '<em><b>Post</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__POST = 3;
+
+	/**
+	 * The feature id for the '<em><b>Put</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__PUT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Delete</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__DELETE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Patch</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__PATCH = 6;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -255,7 +292,7 @@ public interface ApimodelerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = 3;
+	int RESOURCE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -468,7 +505,7 @@ public interface ApimodelerPackage extends EPackage {
 	int RESPONSE__DOCUMENTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Document</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Document</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -594,6 +631,466 @@ public interface ApimodelerPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIELD_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.impl.GetImpl <em>Get</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.impl.GetImpl
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getGet()
+	 * @generated
+	 */
+	int GET = 8;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__TYPE = ACTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__DESCRIPTION = ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Responses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__RESPONSES = ACTION__RESPONSES;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__PARAMETERS = ACTION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__RESPONSE = ACTION__RESPONSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET__PARAMETER = ACTION__PARAMETER;
+
+	/**
+	 * The number of structural features of the '<em>Get</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Get</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.impl.PostImpl <em>Post</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.impl.PostImpl
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getPost()
+	 * @generated
+	 */
+	int POST = 9;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__TYPE = ACTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__DESCRIPTION = ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Responses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__RESPONSES = ACTION__RESPONSES;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__PARAMETERS = ACTION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__RESPONSE = ACTION__RESPONSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST__PARAMETER = ACTION__PARAMETER;
+
+	/**
+	 * The number of structural features of the '<em>Post</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Post</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.impl.PutImpl <em>Put</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.impl.PutImpl
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getPut()
+	 * @generated
+	 */
+	int PUT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__TYPE = ACTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__DESCRIPTION = ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Responses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__RESPONSES = ACTION__RESPONSES;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__PARAMETERS = ACTION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__RESPONSE = ACTION__RESPONSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT__PARAMETER = ACTION__PARAMETER;
+
+	/**
+	 * The number of structural features of the '<em>Put</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Put</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUT_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.impl.DeleteImpl <em>Delete</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.impl.DeleteImpl
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getDelete()
+	 * @generated
+	 */
+	int DELETE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__TYPE = ACTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__DESCRIPTION = ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Responses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__RESPONSES = ACTION__RESPONSES;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__PARAMETERS = ACTION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__RESPONSE = ACTION__RESPONSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__PARAMETER = ACTION__PARAMETER;
+
+	/**
+	 * The number of structural features of the '<em>Delete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Delete</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.impl.PatchImpl <em>Patch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.impl.PatchImpl
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getPatch()
+	 * @generated
+	 */
+	int PATCH = 12;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__TYPE = ACTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__DESCRIPTION = ACTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Responses</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__RESPONSES = ACTION__RESPONSES;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__PARAMETERS = ACTION__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__RESPONSE = ACTION__RESPONSE;
+
+	/**
+	 * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH__PARAMETER = ACTION__PARAMETER;
+
+	/**
+	 * The number of structural features of the '<em>Patch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Patch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATCH_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.Schemes <em>Schemes</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.Schemes
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getSchemes()
+	 * @generated
+	 */
+	int SCHEMES = 13;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.DataType <em>Data Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.DataType
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getDataType()
+	 * @generated
+	 */
+	int DATA_TYPE = 14;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.StatusCode <em>Status Code</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.StatusCode
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getStatusCode()
+	 * @generated
+	 */
+	int STATUS_CODE = 15;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.SchemaType <em>Schema Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.SchemaType
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getSchemaType()
+	 * @generated
+	 */
+	int SCHEMA_TYPE = 16;
+
+	/**
+	 * The meta object id for the '{@link apimodeler.In <em>In</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see apimodeler.In
+	 * @see apimodeler.impl.ApimodelerPackageImpl#getIn()
+	 * @generated
+	 */
+	int IN = 17;
 
 	/**
 	 * Returns the meta object for class '{@link apimodeler.API <em>API</em>}'.
@@ -747,17 +1244,6 @@ public interface ApimodelerPackage extends EPackage {
 	EClass getResource();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link apimodeler.Resource#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Action</em>'.
-	 * @see apimodeler.Resource#getAction()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EReference getResource_Action();
-
-	/**
 	 * Returns the meta object for the attribute '{@link apimodeler.Resource#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -778,6 +1264,61 @@ public interface ApimodelerPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResource_PathParameter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link apimodeler.Resource#getGet <em>Get</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Get</em>'.
+	 * @see apimodeler.Resource#getGet()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Get();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link apimodeler.Resource#getPost <em>Post</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Post</em>'.
+	 * @see apimodeler.Resource#getPost()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Post();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link apimodeler.Resource#getPut <em>Put</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Put</em>'.
+	 * @see apimodeler.Resource#getPut()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Put();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link apimodeler.Resource#getDelete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete</em>'.
+	 * @see apimodeler.Resource#getDelete()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Delete();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link apimodeler.Resource#getPatch <em>Patch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Patch</em>'.
+	 * @see apimodeler.Resource#getPatch()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Patch();
 
 	/**
 	 * Returns the meta object for class '{@link apimodeler.Action <em>Action</em>}'.
@@ -975,10 +1516,10 @@ public interface ApimodelerPackage extends EPackage {
 	EReference getResponse_Documents();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link apimodeler.Response#getDocument <em>Document</em>}'.
+	 * Returns the meta object for the containment reference '{@link apimodeler.Response#getDocument <em>Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Document</em>'.
+	 * @return the meta object for the containment reference '<em>Document</em>'.
 	 * @see apimodeler.Response#getDocument()
 	 * @see #getResponse()
 	 * @generated
@@ -1059,6 +1600,106 @@ public interface ApimodelerPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getField_Type();
+
+	/**
+	 * Returns the meta object for class '{@link apimodeler.Get <em>Get</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get</em>'.
+	 * @see apimodeler.Get
+	 * @generated
+	 */
+	EClass getGet();
+
+	/**
+	 * Returns the meta object for class '{@link apimodeler.Post <em>Post</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Post</em>'.
+	 * @see apimodeler.Post
+	 * @generated
+	 */
+	EClass getPost();
+
+	/**
+	 * Returns the meta object for class '{@link apimodeler.Put <em>Put</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Put</em>'.
+	 * @see apimodeler.Put
+	 * @generated
+	 */
+	EClass getPut();
+
+	/**
+	 * Returns the meta object for class '{@link apimodeler.Delete <em>Delete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete</em>'.
+	 * @see apimodeler.Delete
+	 * @generated
+	 */
+	EClass getDelete();
+
+	/**
+	 * Returns the meta object for class '{@link apimodeler.Patch <em>Patch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Patch</em>'.
+	 * @see apimodeler.Patch
+	 * @generated
+	 */
+	EClass getPatch();
+
+	/**
+	 * Returns the meta object for enum '{@link apimodeler.Schemes <em>Schemes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Schemes</em>'.
+	 * @see apimodeler.Schemes
+	 * @generated
+	 */
+	EEnum getSchemes();
+
+	/**
+	 * Returns the meta object for enum '{@link apimodeler.DataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Data Type</em>'.
+	 * @see apimodeler.DataType
+	 * @generated
+	 */
+	EEnum getDataType();
+
+	/**
+	 * Returns the meta object for enum '{@link apimodeler.StatusCode <em>Status Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Status Code</em>'.
+	 * @see apimodeler.StatusCode
+	 * @generated
+	 */
+	EEnum getStatusCode();
+
+	/**
+	 * Returns the meta object for enum '{@link apimodeler.SchemaType <em>Schema Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Schema Type</em>'.
+	 * @see apimodeler.SchemaType
+	 * @generated
+	 */
+	EEnum getSchemaType();
+
+	/**
+	 * Returns the meta object for enum '{@link apimodeler.In <em>In</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>In</em>'.
+	 * @see apimodeler.In
+	 * @generated
+	 */
+	EEnum getIn();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1202,14 +1843,6 @@ public interface ApimodelerPackage extends EPackage {
 		EClass RESOURCE = eINSTANCE.getResource();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOURCE__ACTION = eINSTANCE.getResource_Action();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1224,6 +1857,46 @@ public interface ApimodelerPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESOURCE__PATH_PARAMETER = eINSTANCE.getResource_PathParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Get</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__GET = eINSTANCE.getResource_Get();
+
+		/**
+		 * The meta object literal for the '<em><b>Post</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__POST = eINSTANCE.getResource_Post();
+
+		/**
+		 * The meta object literal for the '<em><b>Put</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__PUT = eINSTANCE.getResource_Put();
+
+		/**
+		 * The meta object literal for the '<em><b>Delete</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__DELETE = eINSTANCE.getResource_Delete();
+
+		/**
+		 * The meta object literal for the '<em><b>Patch</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__PATCH = eINSTANCE.getResource_Patch();
 
 		/**
 		 * The meta object literal for the '{@link apimodeler.impl.ActionImpl <em>Action</em>}' class.
@@ -1376,7 +2049,7 @@ public interface ApimodelerPackage extends EPackage {
 		EReference RESPONSE__DOCUMENTS = eINSTANCE.getResponse_Documents();
 
 		/**
-		 * The meta object literal for the '<em><b>Document</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Document</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1442,6 +2115,106 @@ public interface ApimodelerPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FIELD__TYPE = eINSTANCE.getField_Type();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.impl.GetImpl <em>Get</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.impl.GetImpl
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getGet()
+		 * @generated
+		 */
+		EClass GET = eINSTANCE.getGet();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.impl.PostImpl <em>Post</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.impl.PostImpl
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getPost()
+		 * @generated
+		 */
+		EClass POST = eINSTANCE.getPost();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.impl.PutImpl <em>Put</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.impl.PutImpl
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getPut()
+		 * @generated
+		 */
+		EClass PUT = eINSTANCE.getPut();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.impl.DeleteImpl <em>Delete</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.impl.DeleteImpl
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getDelete()
+		 * @generated
+		 */
+		EClass DELETE = eINSTANCE.getDelete();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.impl.PatchImpl <em>Patch</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.impl.PatchImpl
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getPatch()
+		 * @generated
+		 */
+		EClass PATCH = eINSTANCE.getPatch();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.Schemes <em>Schemes</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.Schemes
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getSchemes()
+		 * @generated
+		 */
+		EEnum SCHEMES = eINSTANCE.getSchemes();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.DataType <em>Data Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.DataType
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getDataType()
+		 * @generated
+		 */
+		EEnum DATA_TYPE = eINSTANCE.getDataType();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.StatusCode <em>Status Code</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.StatusCode
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getStatusCode()
+		 * @generated
+		 */
+		EEnum STATUS_CODE = eINSTANCE.getStatusCode();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.SchemaType <em>Schema Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.SchemaType
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getSchemaType()
+		 * @generated
+		 */
+		EEnum SCHEMA_TYPE = eINSTANCE.getSchemaType();
+
+		/**
+		 * The meta object literal for the '{@link apimodeler.In <em>In</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see apimodeler.In
+		 * @see apimodeler.impl.ApimodelerPackageImpl#getIn()
+		 * @generated
+		 */
+		EEnum IN = eINSTANCE.getIn();
 
 	}
 
