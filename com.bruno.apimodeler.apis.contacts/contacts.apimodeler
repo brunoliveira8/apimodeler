@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apimodeler:API xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:apimodeler="http://www.example.org/apimodeler" host="virtserver.swaggerhub.com" basePath="/brunoliveira8/contacts/v1">
+  <schemes>https</schemes>
+  <info version="v1" title="Contacts Sample API" description="This is just a Contact Sample API."/>
+  <resource name="contacts">
+    <get description="Show contact by ID.">
+      <response description="Successful response" documents="//@resource.0/@get/@response.0/@document" name="">
+        <document name="Contact"/>
+      </response>
+      <parameter name="contactId" in="path" description="The ID of the contact to return" required="true"/>
+    </get>
+  </resource>
+  <document name="Contact">
+    <field name="id"/>
+    <field name="name" type="string"/>
+    <field name="email" type="string"/>
+    <field name="phone" type="string"/>
+  </document>
+</apimodeler:API>

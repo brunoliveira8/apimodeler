@@ -1,0 +1,53 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/apimodeler')]
+
+
+[template public generateSwagger(api : API)]
+[comment @main/]
+[file ('api.yml', false, 'UTF-8')]
+swagger: '2.0'
+host: [self.host/]
+basePath: [self.basePath/]
+info:
+  version: [self.info.version/]
+  title: [self.info.title/]
+  description: '[self.info.description/]'
+schemes:
+[for (scheme : Schemes | self.schemes)]
+	- [scheme/]
+[/for]
+paths:
+[for (resource : Resource | self.resource)]
+  '/[resource.name/][for (p : Parameter | resource.get.parameter)]/{[p.name/]}[/for]':
+    get:
+	    description: '[resource.get.description/]'
+      parameters:
+      [for (p : Parameter | resource.get.parameter)]
+        - name: [p.name/]
+          in: [p._in/]
+          type: [p.type/]
+          description: [p.description/]
+          required: [p.required/]
+      [/for]
+      responses:
+      [for (response : Response | resource.get.response)]
+        '[response.code/]':
+          description: [response.description/]
+          schema:
+            $ref: '#/definitions/[response.document.name/]'
+      [/for]
+[/for]
+
+definitions:
+[for (d : Document | self.document)]
+  [d.name/]:
+    type: object
+    properties:
+	[for (f : Field | self.field)]
+	    [f.name/]:
+	      type: [f.type/]
+	[/for]
+[/for]
+
+[/file]
+[/template]

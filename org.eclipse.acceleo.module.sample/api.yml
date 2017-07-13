@@ -1,0 +1,38 @@
+swagger: '2.0'
+host: virtserver.swaggerhub.com
+basePath: /brunoliveira8/contacts/v1
+info:
+  version: v1
+  title: Contacts Sample API
+  description: 'This is just a Contact Sample API.'
+schemes:
+	- https
+paths:
+  '/contacts/{contactId}':
+    get:
+	  description: 'Show contact by ID.'
+      parameters:
+        - name: contactId
+          in: path
+          type: integer
+          description: The ID of the contact to return
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Contact'
+
+definitions:
+  Contact:
+    type: object
+    properties:
+	    id:
+	      type: integer
+	    name:
+	      type: string
+	    email:
+	      type: string
+	    phone:
+	      type: string
+
